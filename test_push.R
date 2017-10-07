@@ -9,11 +9,6 @@ colour <- rep(c("a", "b","c"), 30)
 value <- c((rnorm(45, 3) + runif(45)), (rnorm(45,9) + runif(45)))
 index_NA <- sample(1:90, round(90*0.15))
 value[index_NA] <- NA
-# a <- runif(1)
-# b1 <- runif(1)
-# b2 <- runif(1)
-# b3 <- runif(1)
-# y <- a + b1*factor1+b2*factor2+b3*factor1*factor2    
 
 data <-data.frame(id, test, colour, value)
 t.test(value ~ test, data = data[data$colour == 'c',])
