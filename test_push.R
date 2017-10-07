@@ -12,3 +12,5 @@ value[index_NA] <- NA
 
 data <-data.frame(id, test, colour, value)
 t.test(value ~ test, data = data[data$colour == 'c',])
+
+hist(test) #немного графики
